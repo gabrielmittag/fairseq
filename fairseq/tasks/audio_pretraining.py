@@ -16,6 +16,7 @@ from omegaconf import MISSING, II, OmegaConf
 
 from fairseq.data import BinarizedAudioDataset, FileAudioDataset
 from fairseq.dataclass import FairseqDataclass, ChoiceEnum
+from fairseq.dataclass.configs import GenerationConfig
 from fairseq.data.text_compressor import TextCompressionLevel
 
 from . import FairseqTask, register_task
