@@ -11,7 +11,7 @@ import sys
 
 from argparse import Namespace
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Any
 from omegaconf import MISSING, II, OmegaConf
 
 from fairseq.data import BinarizedAudioDataset, FileAudioDataset
