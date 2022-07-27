@@ -122,8 +122,15 @@ class AudioPretrainingConfig(FairseqDataclass):
         metadata={
             "help": "remove BPE tokens before scoring (can be sentencepiece, letter, and more)"
         },
-    )    
-
+    )  
+        
+    autoregressive: bool = field(
+        default=False,
+        metadata={
+            "help": "required for autoregressive decoders (like seq2seq models); "
+            "adds 'prev_output_tokens' to input and appends eos to target"
+        },
+    )
 
 @register_task("audio_pretraining", dataclass=AudioPretrainingConfig)
 class AudioPretrainingTask(FairseqTask):
